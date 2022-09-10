@@ -13,10 +13,10 @@ public class Parser {
     public String getOperation(String expression) {
         Pattern pattern = Pattern.compile(PATTERN_OPERATIONS);
         Matcher matcher = pattern.matcher(expression);
-        String x = "";
+        String operation = "";
         while (matcher.find()) {
-            x = matcher.group();
+            operation = matcher.group();
         }
-        return x;
+        return operation;
     }
 }
