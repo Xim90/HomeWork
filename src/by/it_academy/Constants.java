@@ -1,11 +1,13 @@
 package by.it_academy;
 
 public class Constants {
-    // 456.454-(-53443-5653)
-    //45-3
     public static final String PATTERN_NUMBERS = "-?\\d+(.\\d+)?";
     public static final String PATTERN_OPERATIONS = "(?<=[^(])[\\-+/*]";
     public static final String PATTERN_EXPRESSION =
             PATTERN_NUMBERS + PATTERN_OPERATIONS + "(\\()?" + PATTERN_NUMBERS + "(\\))?";
+    public static final String PRINT_DOUBLE_FORMAT = "%5.2f\n";
     public static final String COMMAND_STOP = "end";
+    public static final String INCORRECT_INPUT = "Некоректный ввод! Попробуйте еще";
+    public static final String OPERATION_NOT_FOUND = "Ошибка! Операция не найдена";
+    public static final String DIVISION_ZERO = "Ошибка! Деление на ноль";
 }
