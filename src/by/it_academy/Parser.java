@@ -6,12 +6,13 @@ import java.util.regex.Pattern;
 import static by.it_academy.Constants.*;
 
 public class Parser {
+
     public double[] getNumbers(String expression) {
         String[] stringNumbers = expression.split(PATTERN_OPERATIONS);
         double[] numbers = new double[stringNumbers.length];
         for (int i = 0; i < stringNumbers.length; i++) {
-            numbers[i] = Double.parseDouble(stringNumbers[i].replace("(", "")
-                    .replace(")", ""));
+            numbers[i] = Double.parseDouble(stringNumbers[i].replace(LEFT_BRACKET, "")
+                    .replace(RIGHT_BRACKET, ""));
         }
         return numbers;
     }
