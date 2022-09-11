@@ -10,24 +10,20 @@ public class Calculator {
     }
 
     public double calc(String expression) throws RuntimeException {
-        String[] numbers = parser.getNumbers(expression);
+        double[] numbers = parser.getNumbers(expression);
         String operation = parser.getOperation(expression);
-        double number1 = Double.parseDouble(numbers[0].replace("(", "")
-                .replace(")", ""));
-        double number2 = Double.parseDouble(numbers[1].replace("(", "")
-                .replace(")", ""));
         switch (operation) {
             case "-":
-                return number1 - number2;
+                return numbers[0] - numbers[1];
             case "+":
-                return number1 + number2;
+                return numbers[0] + numbers[1];
             case "*":
-                return number1 * number2;
+                return numbers[0] * numbers[1];
             case "/":
-                if (number2 == 0) {
+                if (numbers[1] == 0) {
                     throw new RuntimeException(DIVISION_ZERO);
                 } else {
-                    return number1 / number2;
+                    return numbers[0] / numbers[1];
                 }
         }
         throw new RuntimeException(OPERATION_NOT_FOUND);
