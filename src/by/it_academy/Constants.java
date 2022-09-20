@@ -11,10 +11,9 @@ public class Constants {
     public static final String RIGHT_BRACKET = ")";
     public static final String LEFT_BRACKET = "(";
     public static final String COMMAND_STOP = "end";
-    public static final String INCORRECT_INPUT = "Некоректный ввод! Попробуйте еще";
+    public static final String INCORRECT_INPUT = "Incorrect input! Try again";
 
-    public static final String OPERATION_NOT_FOUND = "Ошибка! Операция не найдена";
+    public static final String OPERATION_NOT_FOUND = "Error! Operation not found";
 
-    public static final String DIVISION_ZERO = "Ошибка! Деление на ноль";
-    //2+9/0
+    public static final String DIVISION_ZERO = "Error! Division by zero";
 }
